@@ -5,6 +5,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyJawab — منصة الامتحانات الذكية</title>
+    <meta name="description"
+        content="MyJawab builds custom exam web apps for teachers with student management, exam creation, question banks, automatic grading, reports, and teacher-branded MyJawab subdomains." />
+    <meta name="keywords"
+        content="MyJawab, myjawab.com, exam platform, teacher exam app, online exams, question bank, student management, automatic grading, منصة امتحانات, بنك أسئلة, امتحانات إلكترونية, منصة تعليمية للمعلمين" />
+    <meta name="author" content="Ammar Almasri" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0F172A" />
+    <link rel="canonical" href="https://myjawab.com/" />
+    <link rel="icon" type="image/png" href="myjawab_logo.png" />
+    <link rel="apple-touch-icon" href="myjawab_logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://myjawab.com/" />
+    <meta property="og:title" content="MyJawab — منصة الامتحانات الذكية" />
+    <meta property="og:description"
+        content="Custom exam platforms for teachers: students, exams, question banks, grading, reports, and private MyJawab links." />
+    <meta property="og:image" content="https://myjawab.com/myjawab_logo.png" />
+    <meta property="og:site_name" content="MyJawab" />
+    <meta property="og:locale" content="ar_JO" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MyJawab — منصة الامتحانات الذكية" />
+    <meta name="twitter:description"
+        content="Custom exam web apps for teachers with student management, question banks, grading, and reports." />
+    <meta name="twitter:image" content="https://myjawab.com/myjawab_logo.png" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "MyJawab",
+            "url": "https://myjawab.com/",
+            "logo": "https://myjawab.com/myjawab_logo.png",
+            "founder": {
+                "@type": "Person",
+                "name": "Ammar Almasri"
+            },
+            "sameAs": [
+                "https://instagram.com/_ammar.11",
+                "https://facebook.com/ammaro.almasri"
+            ],
+            "description": "MyJawab builds custom online exam platforms for teachers with student management, exam creation, question banks, automatic grading, reports, and branded subdomains."
+        }
+    </script>
     <link
         href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
@@ -43,6 +84,11 @@
 
             --shadow: 0 22px 70px rgba(15, 23, 42, .12);
             --shadow-soft: 0 16px 45px rgba(15, 23, 42, .08);
+            --radius-xl: 30px;
+            --radius-lg: 22px;
+            --font-ar: 'Tajawal', sans-serif;
+            --font-en: 'DM Sans', sans-serif;
+            --font-display: 'Instrument Serif', serif;
         }
 
         html {
@@ -130,64 +176,67 @@
 
         nav {
             position: fixed;
-            top: 14px;
+            top: 18px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
-            width: min(1120px, calc(100% - 28px));
-            min-height: 72px;
-            padding: 10px 14px;
+            width: min(1140px, calc(100% - 36px));
+            min-height: 78px;
+            padding: 10px 12px 10px 16px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border: 1px solid rgba(255, 255, 255, .72);
-            border-radius: 999px;
-            background: rgba(255, 255, 255, .72);
-            box-shadow: 0 14px 50px rgba(15, 23, 42, .12);
-            backdrop-filter: blur(22px);
+            gap: 18px;
+            border: 1px solid rgba(15, 23, 42, .08);
+            border-radius: 26px;
+            background: rgba(255, 255, 255, .88);
+            box-shadow: 0 18px 55px rgba(15, 23, 42, .10);
+            backdrop-filter: blur(24px);
         }
 
         .nav-logo {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 13px;
             text-decoration: none;
             min-width: 0;
         }
 
         .logo-mark {
-            width: 100px;
-            height: 70px;
+            width: 80px;
+            height: 64px;
             position: relative;
             display: grid;
             place-items: center;
-            border-radius: 18px;
-            background: #0f172a;
-            border: 1px solid rgba(16, 185, 129, .24);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .10), 0 12px 30px rgba(8, 47, 85, .18);
+            border-radius: 16px;
+            background: #ffffff;
+            border: 1px solid rgba(59, 130, 246, .16);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9), 0 12px 26px rgba(59, 130, 246, .14);
             overflow: hidden;
             flex-shrink: 0;
         }
 
         .nav-logo-img {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            width: 198px;
-            height: 112px;
+            width: 100%;
+            height: 100%;
             max-width: none;
             object-fit: contain;
             display: block;
-            transform: translate(-50%, -19px);
-            transform-origin: center top;
         }
 
         .logo-fallback {
             display: none;
-            font-size: 15px;
+            place-items: center;
+            width: 100%;
+            height: 100%;
+            font-family: var(--font-en);
+            font-size: 16px;
             font-weight: 900;
-            color: var(--primary);
-            letter-spacing: -.04em;
+            color: #fff;
+            letter-spacing: -.02em;
+            background:
+                linear-gradient(135deg, rgba(6, 182, 212, .34), transparent 56%),
+                var(--primary-dark);
         }
 
         .nav-brand {
@@ -196,9 +245,12 @@
         }
 
         .nav-brand strong {
-            font-size: 19px;
-            letter-spacing: -.02em;
-            color: var(--primary-dark);
+            font-size: 21px;
+            letter-spacing: -.025em;
+            color: transparent;
+            background: linear-gradient(100deg, #0f2f80 0%, #118df0 46%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
         }
 
         .nav-brand span {
@@ -212,22 +264,23 @@
         .nav-right {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            min-width: 0;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 4px;
-            padding: 5px;
-            border-radius: 999px;
-            background: rgba(236, 253, 245, .72);
+            gap: 2px;
+            padding: 4px;
+            border-radius: 18px;
+            background: #f8fafc;
             border: 1px solid rgba(15, 23, 42, .08);
         }
 
         .nav-link {
-            padding: 9px 14px;
-            border-radius: 999px;
+            padding: 10px 15px;
+            border-radius: 14px;
             color: var(--ink-soft);
             text-decoration: none;
             font-size: 13px;
@@ -239,22 +292,23 @@
         .nav-link:hover {
             color: var(--primary-dark);
             background: #fff;
-            box-shadow: 0 8px 20px rgba(15, 23, 42, .08);
+            box-shadow: 0 8px 18px rgba(15, 23, 42, .07);
         }
 
         .lang-toggle {
-            background: rgba(255, 255, 255, .88);
+            background: #f8fafc;
             border: 1px solid rgba(15, 23, 42, .10);
-            border-radius: 100px;
+            border-radius: 16px;
             padding: 5px;
             display: flex;
             gap: 2px;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8);
         }
 
         .lang-btn {
-            padding: 5px 12px;
-            border-radius: 100px;
+            min-width: 34px;
+            height: 30px;
+            padding: 0 10px;
+            border-radius: 12px;
             font-size: 12px;
             font-weight: 800;
             cursor: pointer;
@@ -297,8 +351,10 @@
         }
 
         .nav-cta {
-            padding: 11px 20px;
+            min-height: 44px;
+            padding: 0 20px;
             font-size: 13px;
+            border-radius: 16px;
         }
 
         .btn-primary {
@@ -560,8 +616,10 @@
         .hero-image-frame img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            object-position: top center;
             display: block;
+            background: #f8fafc;
         }
 
         .img-placeholder {
@@ -1273,10 +1331,19 @@
             overflow: hidden;
         }
 
+        .work-card.featured {
+            grid-column: 1 / -1;
+        }
+
+        .work-card.featured .work-card-img {
+            aspect-ratio: 16 / 7.5;
+        }
+
         .work-card-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top center;
             display: block;
             transition: transform .5s ease;
         }
@@ -1293,6 +1360,27 @@
             background:
                 linear-gradient(135deg, rgba(16, 185, 129, .16), transparent 36%),
                 linear-gradient(145deg, #ffffff, #f8fafc);
+        }
+
+        .screenshot-frame {
+            height: 100%;
+            padding: 12px;
+            background:
+                linear-gradient(135deg, rgba(15, 23, 42, .05), transparent 40%),
+                #f8fafc;
+        }
+
+        .screenshot-window {
+            height: 100%;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #fff;
+            border: 1px solid rgba(15, 23, 42, .10);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, .10);
+        }
+
+        .screenshot-window img {
+            display: block;
         }
 
         .work-preview-top {
@@ -1468,7 +1556,7 @@
         }
 
         .fb-icon {
-            fill: #10b981;
+            fill: #0011f8;
         }
 
         footer {
@@ -1558,18 +1646,22 @@
                 width: calc(100% - 20px);
                 min-height: 64px;
                 padding: 8px;
+                border-radius: 22px;
+            }
+
+            .nav-logo {
+                gap: 9px;
             }
 
             .logo-mark {
-                width: 46px;
-                height: 46px;
-                border-radius: 15px;
+                width: 66px;
+                height: 52px;
+                border-radius: 14px;
             }
 
             .nav-logo-img {
-                width: 168px;
-                height: 95px;
-                transform: translate(-50%, -17px);
+                width: 100%;
+                height: 100%;
             }
 
             .nav-brand span {
@@ -1578,6 +1670,10 @@
 
             .nav-cta {
                 display: none;
+            }
+
+            .lang-toggle {
+                margin-inline-start: auto;
             }
 
             .hero {
@@ -1644,6 +1740,15 @@
             .features-grid,
             .work-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .work-card.featured {
+                grid-column: auto;
+            }
+
+            .work-card.featured .work-card-img,
+            .work-card-img {
+                aspect-ratio: 16 / 10;
             }
 
             .section-wrap {
@@ -1756,10 +1861,10 @@
                                 دروسك إلى <span class="blue marker">منصة امتحانات</span><br>تليق باسمك</span>
                         </h1>
                         <p class="hero-sub"
-                            data-ar="أبني لكل معلم تطبيق ويب خاص به لإدارة الطلاب، إنشاء الامتحانات، تنظيم بنك الأسئلة، والتصحيح التلقائي — بتجربة راقية تشبه المدارس الذكية الحديثة."
-                            data-en="I build each teacher a private web app for managing students, creating exams, organizing question banks, and auto-grading — with a polished smart-school experience.">
+                            data-ar="أبني لكل معلم تطبيق ويب خاص به لإدارة الطلاب، إنشاء الامتحانات، تنظيم بنك الأسئلة، والتصحيح التلقائي — مع رابط خاص باسم المعلم على MyJawab."
+                            data-en="I build each teacher a private web app for managing students, creating exams, organizing question banks, and auto-grading — with a teacher-branded MyJawab link.">
                             أبني لكل معلم تطبيق ويب خاص به لإدارة الطلاب، إنشاء الامتحانات، تنظيم بنك الأسئلة، والتصحيح
-                            التلقائي — بتجربة راقية تشبه المدارس الذكية الحديثة.
+                            التلقائي — مع رابط خاص باسم المعلم على MyJawab.
                         </p>
                         <div class="hero-actions">
                             <a href="https://wa.me/962795302397" target="_blank" class="btn-primary">
@@ -1779,9 +1884,9 @@
                                 <span class="teacher-dot">ع</span>
                                 <span class="teacher-dot">A</span>
                             </div>
-                            <span data-ar="مصممة للمعلمين الذين يريدون تجربة منظمة، واضحة، ومميزة."
-                                data-en="Designed for teachers who want an organized, clear, and premium experience.">مصممة
-                                للمعلمين الذين يريدون تجربة منظمة، واضحة، ومميزة.</span>
+                            <span data-ar="إدارة الطلاب والامتحانات والنتائج من مكان واحد."
+                                data-en="Students, exams, and results managed from one place.">إدارة الطلاب والامتحانات
+                                والنتائج من مكان واحد.</span>
                         </div>
                     </div>
 
@@ -1802,28 +1907,7 @@
                                     المعلم</div>
                             </div>
                             <div class="hero-image-frame">
-                                <div class="dashboard-preview">
-                                    <div class="preview-toolbar">
-                                        <div class="preview-title" data-ar="متابعة الصف والامتحانات"
-                                            data-en="Class and exam control">متابعة الصف والامتحانات</div>
-                                        <div class="preview-badge">myjawab.com</div>
-                                    </div>
-                                    <div class="preview-grid">
-                                        <div class="preview-panel dark">
-                                            <div class="preview-metric">142</div>
-                                            <div class="preview-label" data-ar="طالب داخل المنصة"
-                                                data-en="students on platform">طالب داخل المنصة</div>
-                                        </div>
-                                        <div class="preview-panel preview-list">
-                                            <div class="preview-row"><span>1</span><strong data-ar="اختبار تفاضل"
-                                                    data-en="Calculus quiz">اختبار تفاضل</strong><b>86%</b></div>
-                                            <div class="preview-row"><span>2</span><strong data-ar="واجب هندسة"
-                                                    data-en="Geometry task">واجب هندسة</strong><b>92%</b></div>
-                                            <div class="preview-row"><span>3</span><strong data-ar="بنك أسئلة"
-                                                    data-en="Question bank">بنك أسئلة</strong><b>310</b></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <img src="exams.png" alt="لوحة إدارة الامتحانات في منصة MyJawab" />
                             </div>
                         </div>
 
@@ -1846,14 +1930,7 @@
                 <div class="section-wrap">
                     <div class="about-card reveal">
                         <div class="about-image-frame">
-                            <div class="profile-panel">
-                                <div class="profile-logo">
-                                    <img src="ammar-profile.jpg" alt="Profile logo" />
-                                </div>
-                                <h3 data-ar="منصات امتحانات باسم كل معلم" data-en="Teacher-branded exam platforms">منصات
-                                    امتحانات باسم كل معلم</h3>
-
-                            </div>
+                            <img src="ammar-profile.jpg" alt="عمار المصري" />
                             <div class="about-image-badge">
                                 <div class="badge-avatar">ع</div>
                                 <div>
@@ -1889,9 +1966,9 @@
                                         data-en="Question banks, exams, results, and reports">بنوك أسئلة، امتحانات،
                                         نتائج، وتقارير</span></div>
                                 <div class="about-list-item"><span class="about-check">✓</span><span
-                                        data-ar="تصميم Premium يناسب المدارس والمراكز"
-                                        data-en="Premium design for schools and centers">تصميم Premium يناسب المدارس
-                                        والمراكز</span></div>
+                                        data-ar="إعداد المنصة حسب مادة المعلم وطريقة اختباراته"
+                                        data-en="Platform setup based on each teacher's subject and exam flow">إعداد
+                                        المنصة حسب مادة المعلم وطريقة اختباراته</span></div>
                             </div>
                             <a href="https://wa.me/962795302397" target="_blank" class="btn-primary"
                                 style="width:fit-content;">
@@ -1914,10 +1991,9 @@
                                 نظام امتحانات يشبه<br><span class="accent">مدرسة ذكية</span></h2>
                         </div>
                         <p class="section-sub"
-                            data-ar="ألوان أفتح، تجربة أوضح، وحركة ظهور ناعمة تعطي إحساس احترافي بدون ما تكون الصفحة مزعجة أو ثقيلة."
-                            data-en="A brighter theme, cleaner experience, and soft reveal motion that feels professional without making the page noisy or heavy.">
-                            ألوان أفتح، تجربة أوضح، وحركة ظهور ناعمة تعطي إحساس احترافي بدون ما تكون الصفحة مزعجة أو
-                            ثقيلة.</p>
+                            data-ar="المنصة تجمع الأدوات التي يحتاجها المعلم يوميًا: الطلاب، الامتحانات، بنك الأسئلة، والنتائج."
+                            data-en="The platform brings together the daily tools teachers need: students, exams, question banks, and results.">
+                            المنصة تجمع الأدوات التي يحتاجها المعلم يوميًا: الطلاب، الامتحانات، بنك الأسئلة، والنتائج.</p>
                     </div>
 
                     <div class="features-grid">
@@ -2005,10 +2081,9 @@
                         <h3 data-ar="من فكرة بسيطة إلى منصة جاهزة للطلاب"
                             data-en="From a simple idea to a student-ready platform">من فكرة بسيطة إلى منصة جاهزة للطلاب
                         </h3>
-                        <p data-ar="هذا الجزء يعطي الصفحة إحساس Premium أثناء التمرير، لأن الخطوات تظهر واحدة تلو الأخرى بشكل مرتب."
-                            data-en="This section gives the page a premium scrolling feel, with each step appearing cleanly as the user moves down.">
-                            هذا الجزء يعطي الصفحة إحساس Premium أثناء التمرير، لأن الخطوات تظهر واحدة تلو الأخرى بشكل
-                            مرتب.</p>
+                        <p data-ar="نبدأ بفهم طريقة عملك، ثم نجهز المنصة ونربطها على نطاق خاص باسمك."
+                            data-en="We start with how you work, then prepare the platform and connect it to your own branded link.">
+                            نبدأ بفهم طريقة عملك، ثم نجهز المنصة ونربطها على نطاق خاص باسمك.</p>
                     </div>
 
                     <div class="timeline">
@@ -2025,11 +2100,10 @@
                         <div class="timeline-step reveal delay-1">
                             <div class="step-number">2</div>
                             <div>
-                                <h4 data-ar="نبني الهوية والتجربة" data-en="Build the identity and UX">نبني الهوية
-                                    والتجربة</h4>
-                                <p data-ar="ألوان، صفحات، واجهات، ورسائل واضحة تجعل المنصة سهلة على الطالب والمعلم."
-                                    data-en="Colors, pages, screens, and clear messages that make the app easy for teachers and students.">
-                                    ألوان، صفحات، واجهات، ورسائل واضحة تجعل المنصة سهلة على الطالب والمعلم.</p>
+                                <h4 data-ar="نجهز شكل المنصة" data-en="Prepare the platform structure">نجهز شكل المنصة</h4>
+                                <p data-ar="نرتب الصفحات الأساسية، الحسابات، والصلاحيات حسب طريقة عمل المعلم."
+                                    data-en="Core pages, accounts, and permissions are arranged around how the teacher works.">
+                                    نرتب الصفحات الأساسية، الحسابات، والصلاحيات حسب طريقة عمل المعلم.</p>
                             </div>
                         </div>
                         <div class="timeline-step reveal delay-2">
@@ -2071,14 +2145,10 @@
                     </div>
 
                     <div class="work-grid">
-                        <a href="https://omarmath.myjawab.com" class="work-card reveal">
+                        <a href="https://omarmath.myjawab.com" class="work-card featured reveal">
                             <div class="work-card-img">
-                                <div class="work-preview">
-                                    <div class="work-preview-top">
-                                        <div class="work-preview-logo">ع</div>
-                                        <div class="work-preview-pill">omarmath.myjawab.com</div>
-                                    </div>
-                                    <div aria-hidden="true">
+                                <div class="screenshot-frame">
+                                    <div class="screenshot-window">
                                         <img src="omarmath_login.png" alt="omarmath webapp" />
                                     </div>
                                 </div>
@@ -2091,29 +2161,71 @@
                             </div>
                         </a>
 
-                        <a href="#contact" class="work-card coming-card reveal delay-1">
+                        <a href="#contact" class="work-card reveal delay-1">
                             <div class="work-card-img">
-                                <div class="work-preview">
-                                    <div class="work-preview-top">
-                                        <div class="work-preview-logo">+</div>
-                                        <div class="work-preview-pill" data-ar="teacher.myjawab.com"
-                                            data-en="teacher.myjawab.com">teacher.myjawab.com</div>
-                                    </div>
-                                    <div class="work-preview-chart" aria-hidden="true">
-                                        <span style="height:36%"></span>
-                                        <span style="height:54%"></span>
-                                        <span style="height:78%"></span>
-                                        <span style="height:62%"></span>
-                                        <span style="height:90%"></span>
+                                <div class="screenshot-frame">
+                                    <div class="screenshot-window">
+                                        <img src="students.png" alt="لوحة إدارة الطلاب" />
                                     </div>
                                 </div>
                             </div>
                             <div class="work-card-body">
-                                <div class="work-tag" data-ar="قريبًا" data-en="Coming Soon">قريبًا</div>
-                                <div class="work-card-title" data-ar="منصتك هنا" data-en="Your Platform Here">منصتك هنا
+                                <div class="work-tag" data-ar="إدارة الطلاب" data-en="Students">إدارة الطلاب</div>
+                                <div class="work-card-title" data-ar="إضافة الطلاب ومتابعتهم"
+                                    data-en="Student management">إضافة الطلاب ومتابعتهم</div>
+                                <div class="work-card-sub" data-ar="بحث، فروع، حالات، وتصدير"
+                                    data-en="Search, classes, status, and export">بحث، فروع، حالات، وتصدير</div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="work-card reveal delay-2">
+                            <div class="work-card-img">
+                                <div class="screenshot-frame">
+                                    <div class="screenshot-window">
+                                        <img src="exams.png" alt="لوحة إدارة الاختبارات" />
+                                    </div>
                                 </div>
-                                <div class="work-card-sub" data-ar="تواصل معنا لتبدأ" data-en="Contact us to start">
-                                    تواصل معنا لتبدأ</div>
+                            </div>
+                            <div class="work-card-body">
+                                <div class="work-tag" data-ar="الامتحانات" data-en="Exams">الامتحانات</div>
+                                <div class="work-card-title" data-ar="إنشاء الاختبارات ونشرها"
+                                    data-en="Create and publish exams">إنشاء الاختبارات ونشرها</div>
+                                <div class="work-card-sub" data-ar="مسودات، نشر، معاينة، ونتائج"
+                                    data-en="Drafts, publishing, preview, and results">مسودات، نشر، معاينة، ونتائج</div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="work-card reveal">
+                            <div class="work-card-img">
+                                <div class="screenshot-frame">
+                                    <div class="screenshot-window">
+                                        <img src="questionbank.png" alt="بنك الأسئلة" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-card-body">
+                                <div class="work-tag" data-ar="بنك الأسئلة" data-en="Question Bank">بنك الأسئلة</div>
+                                <div class="work-card-title" data-ar="أسئلة منظمة حسب التصنيف"
+                                    data-en="Organized reusable questions">أسئلة منظمة حسب التصنيف</div>
+                                <div class="work-card-sub" data-ar="معاينة، تعديل، وإجابات صحيحة"
+                                    data-en="Preview, edit, and correct answers">معاينة، تعديل، وإجابات صحيحة</div>
+                            </div>
+                        </a>
+
+                        <a href="#contact" class="work-card reveal delay-1">
+                            <div class="work-card-img">
+                                <div class="screenshot-frame">
+                                    <div class="screenshot-window">
+                                        <img src="questiongroups.png" alt="تصنيفات الأسئلة" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-card-body">
+                                <div class="work-tag" data-ar="التصنيفات" data-en="Categories">التصنيفات</div>
+                                <div class="work-card-title" data-ar="تنظيم بنك الأسئلة"
+                                    data-en="Question bank categories">تنظيم بنك الأسئلة</div>
+                                <div class="work-card-sub" data-ar="تصنيفات، أوصاف، وعدد الأسئلة"
+                                    data-en="Categories, descriptions, and counts">تصنيفات، أوصاف، وعدد الأسئلة</div>
                             </div>
                         </a>
                     </div>
